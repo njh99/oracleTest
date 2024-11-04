@@ -24,4 +24,5 @@ SELECT first_name || '의 직급은' || job_id||'입니다' as data from employe
 --중복되지 않게 보여주기 distinct
 SELECT job_id from employees;
 SELECT distinct job_id from employees;
-SELECT hlre_date || '입사일'from departments;
+SELECT hire_date || '입사일'|| salary||'급여' from employees;
+select distinct department_id from employees;
