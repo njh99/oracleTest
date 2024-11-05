@@ -6,7 +6,7 @@ desc employees;
 select * from employees;
 --department 테이블 객체를 확인
 select * from departments;
---department 구조
+--desc 디스크라이브department 구조
 desc departments;
 --department_ id, department_name 만 보임
 SELECT department_id, department_name from departments;
@@ -26,3 +26,22 @@ SELECT job_id from employees;
 SELECT distinct job_id from employees;
 SELECT hire_date || '입사일'|| salary||'급여' from employees;
 select distinct department_id from employees;
+--연봉을 3000 이상 받는 사람정보
+select * from employees where salary >= 3000;
+desc employees;
+select * from employees WHERE HIRE_DATE >='2008/01/01';
+--2008년 이후에 입사한 직원 조사
+select * from employees where TO_CHAR (hire_date,'YYYY/MM/DD') >='2008-01-01';
+select * from employees WHERE HIRE_DATE >=TO_DATE('2008/01/01','YYYY/MM/DD HH24:MI:SS');
+--AND BETWEEN A AND B
+SELECT *FROM employees WHERE salary >= 2000 AND salary <= 3000;
+SELECT *FROM employees WHERE salary BETWEEN 2000 AND 3000;
+--or, in직원 번호가 67이거나 101이거나 184인 직원
+select * from employees where employee_id = 67 or employee_id = 101 or employee_id = 184;
+select * from employees where employee_id in (67,101,184);
+--NULL 연산, 비교, 할당 안된다.
+SELECT 100-NULL FROM DUAL;
+SELECT * FROM EMPLOYEES WHERE commission_pct IS NOT NULL;
+SELECT * FROM EMPLOYEES WHERE commission_pct IS NULL;
+--OREDER BY ASC, DESC
+
