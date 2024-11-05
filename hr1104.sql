@@ -68,3 +68,24 @@ SELECT first_name, hire_date AS 입사일, SYSDATE AS 현재날짜,
 ROUND(MONTHS_BETWEEN(SYSDATE,HIRE_DATE))AS "근무달수" FROM employees WHERE department_id = 30;
 --NEXTDAT() 함수기능
 SELECT SYSDATE,TO_CHAR(SYSDATE,'YYYY/MM/DD HH24:MI:SS'),NEXT_DAY(SYSDATE, '수요일') FROM DUAL;
+
+--11/05과제
+desc employees;
+select * from employees where department_id = 110;
+select employee_id, first_name, salary from employees WHERE salary <5000;
+SELECT employee_id, first_name,job_id from employees where first_name ='John';
+SELECT * from employees where salary>5000 AND salary<10000;
+select * from employees where employee_id = 134 or employee_id = 201 or employee_id = 107;
+select manager_id from employees where not manager_id = FI_MGR;
+select employee_id, first_name, salary from employees where salary > 2500 and salary <4500;
+select employee_id, first_name, salary from employees where salary > 2500 and salary <4500;
+select employee_id, first_name, salary from employees where salary BETWEEN 2500 and 4500;
+select employee_id, first_name, salary,COMMISSION_PCT from employees where COMMISSION_PCT = 0.3 or COMMISSION_PCT=0.05 or COMMISSION_PCT = 0.1;
+select employee_id, first_name, salary,COMMISSION_PCT from employees where COMMISSION_PCT in(0.3,0.05,0.1);
+select employee_id, first_name from employees where first_name not like'%a%';
+select employee_id, first_name, salary from employees ORDER BY salary deSC;
+select employee_id, first_name, hire_date from employees order by hire_date desc;
+select employee_id,first_name, salary from employees where length(first_name)=6; 
+
+
+
