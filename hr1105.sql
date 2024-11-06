@@ -66,5 +66,26 @@ desc emp02;
 --제약조건 not null 
 alter table emp02 modify salary number(10,2) not null;
 
-
-
+create table stuscore(
+    stu_code number(10),
+    stu_name varchar(20) not null,
+    stu_math number(3,1) default 0,
+    stu_kor number(3,1) default 0,
+    stu_eng number(3,1) default 0,
+    stu_sum number(3,1) default 0,
+    stu_avg number(3,1) default 0
+);
+alter table stuscore add CONSTRAINT stu_code_pk primary key(stu_code);
+select stuscore from tab;
+create table Student(
+    stu_number number(10),
+    stu_name varchar(20) not null,
+    stu_math number(3,1) default 0,
+    stu_kor number(3,1) default 0,
+    stu_eng number(3,1) default 0,
+    stu_sum number(3,1) default 0,
+    stu_avg number(3,1) default 0,
+    stu_code number(10)
+);
+alter table Student add CONSTRAINT stu_number_pk primary key(stu_number);
+alter table Student add CONSTRAINT stu_stu_code_uk UNIQUE(stu_code);
