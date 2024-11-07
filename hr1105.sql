@@ -65,7 +65,7 @@ alter table customer add constraint customer_gender_check check(customer_gender 
 desc emp02;
 --제약조건 not null 
 alter table emp02 modify salary number(10,2) not null;
-
+select stuscore from tab;
 create table stuscore(
     stu_code number(10),
     stu_name varchar(20) not null,
@@ -76,7 +76,6 @@ create table stuscore(
     stu_avg number(3,1) default 0
 );
 alter table stuscore add CONSTRAINT stu_code_pk primary key(stu_code);
-select stuscore from tab;
 create table Student(
     stu_number number(10),
     stu_name varchar(20) not null,
@@ -87,5 +86,21 @@ create table Student(
     stu_avg number(3,1) default 0,
     stu_code number(10)
 );
+alter table stuscore add CONSTRAINT stu_code_pk primary key(stu_code);
 alter table Student add CONSTRAINT stu_number_pk primary key(stu_number);
 alter table Student add CONSTRAINT stu_stu_code_uk UNIQUE(stu_code);
+-- INNER JOIN예시
+ROLLBACK;
+SELECT employee_id, FIRST_NAME, JOB_ID, SALARY, employees.department_id, DEPARTMENT_NAME,
+    CASE
+    WHEN UPPER(D.DEPARTMENT_NAME) =  UPPER('MaRKETING') THEN SALARY* 1.05
+    WHEN UPPER(D.DEPARTMENT_NAME) =  UPPER('PURCHASING') THEN SALARY* 1.1
+    WHEN UPPER(D.DEPARTMENT_NAME) =  UPPER('HUMAN RESOURCES') THEN SALARY* 1.15
+    WHEN UPPER(D.DEPARTMENT_NAME) =  UPPER('IT') THEN SALARY* 1.20
+    END NEWSALARY
+FROM EMPLOYEES E INNER JOIN DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
+WHERE UPPER(D.DEPARTMENT_NAME)IN  UPPER('MaRKETING', UPPER('PURCHASING'),UPPER('HUMAN RESOURCES'),UPPER('IT'))
+ORDER BY NEWSALARY DESC;
+
+
+
