@@ -106,6 +106,14 @@ SELECT FIRST_NAME, SALARY, NVL(COMMISSION_PCT,0)COMMISION_PCT,JOB_ID FROM EMPLOY
 --NVL2(대상, 널이 아닐때 적용될 값, 널일때 적용될값)
 SELECT FIRST_NAME, SALARY, COMMISSION_PCT, SALARY+(SALARY*NVL(COMMISSION_PCT,0))AS TOTAL FROM EMPLOYEES;
 SELECT FIRST_NAME, SALARY, COMMISSION_PCT, SALARY+(SALARY*NVL2(COMMISSION_PCT,COMMISSION_PCT,0))AS TOTAL FROM EMPLOYEES;
-select NVL(manager_id,'ceo') from employees;
+select NVL(manager_id,'ceo')from employees WHERE MANAGER_ID IS NULL ;
+select NVL2(manager_id,manager_id,'ceo') from employees WHERE MANAGER_ID IS NULL;
 
-
+SELECT EMPLOYEES_ID, FIRST_NAME, SALARY, DEPARTMENT_ID;
+--조인 부분(INNER JOIN, OUTER JOIN, SELF JOIN, CROSS JOIN)
+select employee_id, first_name, last_name, job_id, salary,
+                    decode(job_id, 'MK%', salary + salary * 0.05,
+                         job_id = 'PU%', salary + salary * 0.10, 
+                         job_id = 'HR%', salary + salary * 0.15,
+                         job_id = 'IT%', salary + salary * 0.20) from employees
+                         order by salary;
