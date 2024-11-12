@@ -133,3 +133,27 @@ SELECT ROUND(AVG(SALARY)) FROM EMPLOYEES WHERE DEPARTMENT_ID = 60;
 SELECT DEPARTMENT_ID, FIRST_NAME, SALARY FROM EMPLOYEES 
 WHERE SALARY > (SELECT ROUND(AVG(SALARY)) FROM EMPLOYEES WHERE DEPARTMENT_ID = 
 (SELECT DEPARTMENT_ID FROM EMPLOYEES WHERE FIRST_NAME='Valli'));
+
+--샘플문제
+SELECT SALARY FROM EMPLOYEES WHERE LAST_NAME = 'Tucker';
+
+select first_name, last_name, job_id, salary from employees 
+where salary >(SELECT SALARY FROM EMPLOYEES WHERE LAST_NAME = 'Tucker');
+
+--문제 1번
+select job_id ,min(salary)from employees group by job_id; 
+select job_id,min(salary) from employees group by job_id;
+select first_name, last_name, job_id, salary, hire_date from employees where job_id in(select job_id from employees group by job_id)
+and salary in(select min(salary)from employees group by job_id); 
+
+--문제 2번
+select department_id ,round(avg(salary)) from employees group by department_id;
+
+select first_name, last_name, job_id, salary, department_id from employees 
+where salary > any(select round(avg(salary)) from employees group by department_id);
+
+--문제 3번
+select department_id ,round(avg(salary)) from employees group by department_id;
+
+select first_name, job_id, department_id,(select round(avg(salary)) from employees where department_id = e.department_id)
+as "Department Avg Salary" from employees e;
