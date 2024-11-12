@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="88FC0C7A-3476-DDE9-C9AB-79B878F55ADF" name="TRAINEE">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:40:47 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="032C17A9-AB32-B8ED-C068-016E20447279">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:41:10 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODE" id="928C145F-3F3A-C7DF-BEF8-C44B863D3BD5">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:41:48 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EBF404C0-39F2-D3F3-E52A-EEF04E870168" referredColumn="8DB6D2F9-8F34-1859-7CB4-D18B8F645B21"/>
+</associations>
+</Column>
+<Column name="NUM" id="DA526F58-D8A8-8748-7169-E16A0153E5A6">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:42:16 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SECTION" id="E8108FD8-15EA-E04E-393D-C2619B968A34">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:43:15 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGISTER" id="C54DF110-C991-3DF3-3708-191A62A827AA">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:43:32 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUBJECT_NUMBER" id="C0CA5529-54E8-8C21-576F-143A9889766A">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:46:42 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F468B2CE-848F-D406-2292-0FCEFE776D4D" referredColumn="1CF63454-34AE-6825-F965-607F6A293E78"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="81DE4CCB-637A-4316-1A57-7669A353FC47" name="TRAINEE_PK">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:43:58 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="032C17A9-AB32-B8ED-C068-016E20447279"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="19278180-9C65-AB40-F27A-89869F02A3C4" name="TRAINEE_STUDENT_CODE_FK">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:44:34 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="928C145F-3F3A-C7DF-BEF8-C44B863D3BD5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B4CF9A4C-59E8-1C3C-7609-CB839487E42D" name="TRAINEE_SUBJECT_FK">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:46:42 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0CA5529-54E8-8C21-576F-143A9889766A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
