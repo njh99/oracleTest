@@ -26,3 +26,4 @@ CREATE USER javauser IDENTIFIED BY 123456 -- 사용자 이름: Model, 비밀번�
     DEFAULT TABLESPACE javadata
     TEMPORARY TABLESPACE TEMP; --임시저장장소
 GRANT connect, resource, dba TO javauser; -- 권한 부여
+--7. 접속기능 진행
