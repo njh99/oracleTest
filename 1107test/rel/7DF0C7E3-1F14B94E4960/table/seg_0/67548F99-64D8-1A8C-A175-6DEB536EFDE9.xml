@@ -1,0 +1,164 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="67548F99-64D8-1A8C-A175-6DEB536EFDE9" schemaObject="EB40B2E0-2C2E-9FCB-70D2-D7C2727E1BAB" name="VIDEO">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>VIDEO</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:34 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VID_CODE" id="25E498C6-6A52-82E5-CCF4-F8E597B10290">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>VID_CODE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:34 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITLE" id="5D960B7C-19D0-EA2C-59C7-F71CB45418F1">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>TITLE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:34 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GENRE" id="4E5BA0EC-134A-0FE2-254F-6FC4CF978C76">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>GENRE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:34 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAY" id="6E993859-E344-B9A5-D1C1-BF9DB18F1F83">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>PAY</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:34 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEND_STATE" id="1A408617-C72E-85F8-A2E8-081A0B4CA3BF">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>LEND_STATE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:34 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAKE_COMPANY" id="422EC24D-E089-8D37-3029-CD32A244B1F7">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>MAKE_COMPANY</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:34 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAKE_DATE" id="EB2E46C3-AFB6-4DA9-F5FF-7BB82349BB3D">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>MAKE_DATE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:34 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VIEW_AGE" id="F941B228-3616-1611-D33B-ED62DDBE6AF8">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>VIEW_AGE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:34 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3EA911E6-9F85-48CD-A430-38541D5D1E91" name="VID_CODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>VID_CODE_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:36 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="25E498C6-6A52-82E5-CCF4-F8E597B10290"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4FA10A6-4478-E21B-1FFB-7B0A4B5BCD24" schemaObject="EB40B2E0-2C2E-9FCB-70D2-D7C2727E1BAB" name="VID_CODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>VID_CODE_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:36 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="25E498C6-6A52-82E5-CCF4-F8E597B10290"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

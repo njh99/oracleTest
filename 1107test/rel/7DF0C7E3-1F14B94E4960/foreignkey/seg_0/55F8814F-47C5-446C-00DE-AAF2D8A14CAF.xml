@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="55F8814F-47C5-446C-00DE-AAF2D8A14CAF" containerWithKeyObject="EEB0692A-D66D-955A-DFAD-3A26517F5CC7" localFKIndex="64F8200E-3186-5C1E-DBEB-98165C81132B" name="CUS_CODE_FK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>CUS_CODE_FK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-07 08:33:37 UTC</createdTime>
+<ownerDesignName>1107test</ownerDesignName>
+<referredTableLongName>HR.CUSTOMER01</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8EAB237A-9CD4-376B-4696-CC1631228190</referredTableID>
+<keyObject>2627E863-D22C-F644-2A1C-ADAF24DB4058</keyObject>
+<referredKeyID>2627E863-D22C-F644-2A1C-ADAF24DB4058</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>CUS_CODE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

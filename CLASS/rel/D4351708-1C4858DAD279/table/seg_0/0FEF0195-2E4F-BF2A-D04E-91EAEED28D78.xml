@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0FEF0195-2E4F-BF2A-D04E-91EAEED28D78" schemaObject="503AFCEE-43C0-ADCC-830A-FC1BD4C4F907" name="TRAINEE">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>TRAINEE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:52 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="STU_NUM" id="C97CC5D9-37B8-149D-D51D-7940183B6865">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>TRAINEE</sourceObjSchema>
+<sourceObjName>STU_NUM</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:53 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B93FA7AC-B212-D152-268D-619DA6A00B64" referredColumn="63F29857-ED44-551A-008F-5DE75C4DE035"/>
+</associations>
+</Column>
+<Column name="LESSON01_NUM" id="E15D0811-E1D5-DDB0-28FB-0FF2FCE4ED6F">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>TRAINEE</sourceObjSchema>
+<sourceObjName>LESSON01_NUM</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:53 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D036205-1EC5-FAE8-6B20-EF7E7F770366" referredColumn="9E2CF5CB-248D-401D-927D-D9FEE6FBFDCC"/>
+</associations>
+</Column>
+<Column name="SECTION" id="09912A08-38CD-5EB6-6529-EC6B55CF4F5C">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>TRAINEE</sourceObjSchema>
+<sourceObjName>SECTION</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:53 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TR_DATE" id="782C45BD-4AFC-A3CB-2A2E-E56097D78F5B">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>TRAINEE</sourceObjSchema>
+<sourceObjName>TR_DATE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:53 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C766D60E-46C9-6D3F-A5AB-DF906C2E5D72" name="LESSON01_NUM_FK">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:55 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E15D0811-E1D5-DDB0-28FB-0FF2FCE4ED6F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8EB459FA-3B52-34EB-BAF3-4A36AAA2A2C5" name="TRAINEE_STU_NUM_FK">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:55 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C97CC5D9-37B8-149D-D51D-7940183B6865"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

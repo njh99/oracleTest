@@ -1,0 +1,173 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5FDE1FDA-41C2-E0F6-41EC-877A633D78DD" name="STUDENT">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:20:00 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="FA5EE1C3-D4B0-E3CB-CF3D-D3795260D894">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:20:58 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODE" id="8DB6D2F9-8F34-1859-7CB4-D18B8F645B21">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:23:16 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUM" id="F6FA246D-4908-A906-433B-B91C8AAEFFF0">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:26:53 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1CD78C40-613E-5F18-1B9E-E675A9BB6BA1" referredColumn="1CF63454-34AE-6825-F965-607F6A293E78"/>
+</associations>
+</Column>
+<Column name="NAME" id="F98FF487-23E4-81F5-A819-A9D1092E71A0">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:23:57 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID" id="03F34EA2-7A36-07A7-2205-0DD896DE7EC5">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:24:57 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PWD" id="2E9A82FF-1293-40D6-3FE1-9EA894E04016">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:25:21 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JUMINNO" id="FEA0061B-2A5A-B9FC-93C2-9964605AC21E">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:27:55 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>13 CHAR</dataTypeSize>
+<ownDataTypeParameters>13 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE" id="56174CAF-0410-972D-43B0-95B8DA2DC5D7">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:28:37 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11 CHAR</dataTypeSize>
+<ownDataTypeParameters>11 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESS" id="CE720890-728F-EBC7-689E-4CABE3C8A3EE">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:29:13 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="0554053F-BB7E-1B84-0E6A-8974172D32B1">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:29:45 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENROLL" id="4D9C10AC-E1EB-DB16-16D6-0AF21DAB4398">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:30:40 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STUDENT_CODE" id="64396115-B7B4-2C9B-984B-58C58D68265C">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:32:37 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="60632A94-CDC9-6A24-B460-B4B283FEC946" name="STUDENT_PK">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:23:16 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8DB6D2F9-8F34-1859-7CB4-D18B8F645B21"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B43E481D-6C28-29ED-80DE-BB0F2C9E53D7" name="STUDENT_STUDENT_NUM_FK">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 02:32:37 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6FA246D-4908-A906-433B-B91C8AAEFFF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

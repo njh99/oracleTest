@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="LESSON01" directorySegmentName="seg_0" id="E0D92688-1DE2-10CE-D966-61B53DABDB12">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:52 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<schemaObject>503AFCEE-43C0-ADCC-830A-FC1BD4C4F907</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>C06DA521-81B3-6476-D2BF-8A24E6CF0D03</segment>
+<tableSpace>FDE21921-9DAA-ACC2-49AC-E46C8A226379</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NAME" id="0D609F6D-A040-1673-C26C-18D1FBE91F4E">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:53 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NUM" id="9E2CF5CB-248D-401D-927D-D9FEE6FBFDCC">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:53 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="LESSON01_NUM_PK" id="6DDF7C62-CFA1-210B-5ED1-6CE09092A1BC">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:54 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<schemaObject>503AFCEE-43C0-ADCC-830A-FC1BD4C4F907</schemaObject>
+<segment>54DDC513-4F7A-6400-3FAA-6B3A5FD53186</segment>
+<tableSpace>FDE21921-9DAA-ACC2-49AC-E46C8A226379</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="LESSON01_NUM_PK" id="F648A254-29E0-8155-0CEA-E9ED56F36D5D">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-08 01:45:55 UTC</createdTime>
+<ownerDesignName>CLASS</ownerDesignName>
+<segment>54DDC513-4F7A-6400-3FAA-6B3A5FD53186</segment>
+<tableSpace>FDE21921-9DAA-ACC2-49AC-E46C8A226379</tableSpace>
+<existingIndex>6DDF7C62-CFA1-210B-5ED1-6CE09092A1BC</existingIndex>
+<indexSegment>54DDC513-4F7A-6400-3FAA-6B3A5FD53186</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>
