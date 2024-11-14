@@ -148,6 +148,44 @@ EXCEPTION
      DBMS_OUTPUT.PUT_LINE(VNO||'해당부서에 해당되는 사원이 없습니다.');
 END;
 /
+--구구단 만들기 FOR IN 문
+DECLARE
+    I BINARY_INTEGER :=0;
+    J BINARY_INTEGER :=0;
+BEGIN
+    FOR I IN 1..9 LOOP
+        FOR J IN 1..9 LOOP
+        DBMS_OUTPUT.PUT_LINE(I||'*'||J||'='||I*J);
+        END LOOP;
+    END LOOP;
+END;
+/
+--루프문
+DECLARE
+    VNUM NUMBER:=0;
+    VCOUNT NUMBER:=0;
+    VDAN NUMBER:=0;
+BEGIN
+    LOOP
+        VDAN := VDAN+1;
+        VCOUNT :=1;
+        DBMS_OUTPUT.PUT_LINE('========='||VDAN||'==============');
+        LOOP
+            DBMS_OUTPUT.PUT_LINE(VDAN||'*'||VCOUNT||'='||VDAN*VCOUNT);
+            VCOUNT := VCOUNT + 1;
+            IF VCOUNT > 9 THEN
+            EXIT;
+            END IF;
+        END LOOP;
+     IF VDAN > 9 THEN
+     
+        EXIT;
+    END IF;
+    END LOOP;
+END;
+/
+
+
 
 
 
