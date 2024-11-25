@@ -7,7 +7,7 @@ create table subject(
 );
 ALTER TABLE SUBJECT ADD CONSTRAINT SUBJECT_NO_PK PRIMARY KEY(NO);
 ALTER TABLE SUBJECT ADD CONSTRAINT SUBJECT_NUM_UK UNIQUE(NUM);
-
+insert into subject(no, s_num, s_name) values (subject_seq.nextval, ?, ?);
 CREATE SEQUENCE SUBJECT_SEQ
 START WITH 1
 INCREMENT BY 1;
@@ -69,8 +69,9 @@ start with 1
 increment by 1;
 
 
+insert into student values(student_seq.nextval,?,?,?,?,?,?,?,?,?,sysdate);
 
-
-
+--SUBJECT STUDENT INNER JOIN
+SELECT NO,NUM,NAME,ID,PASSWD,S_NUM,SUB.NAME,BIRTHDAY,PHONE,ADDRESS,EMAIL,SDATE FROM STUDENT STU INNER JOIN  SUBJECT SUB ON STU.S_NUM = SUB.NUM;
 
 
