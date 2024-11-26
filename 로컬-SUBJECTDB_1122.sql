@@ -49,13 +49,13 @@ ALTER TABLE lesson ADD CONSTRAINT lesson_ABBE_UK UNIQUE(abbre);
 create sequence lesson_seq 
 start with 1
 increment by 1;
-
+drop table trainee;
 create table trainee( 
     no number ,                     --pk seq
-    s_num varchar2(8) not null,       --student fk 번호
+    s_num varchar2(8) not null,     --student fk 번호
     abbre varchar2(2) not null,     --lesson fk 과목요약
     section varchar2(20) not null,  --전공,부전공
-    tdate date default sysdate     --수강신청일
+    registdate date default sysdate      --수강신청일
    
 );
 ALTER TABLE trainee ADD CONSTRAINT trainee_NO_PK PRIMARY KEY(NO);
