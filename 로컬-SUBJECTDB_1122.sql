@@ -37,10 +37,11 @@ CREATE SEQUENCE STUDENT_SEQ
 START WITH 1
 INCREMENT BY 1;
 --과목
+
 create table lesson( 
     no number ,--PK SEQ
     abbre varchar2(2) not null, --과목 요약
-    name varchar2(20) not null--과목이름
+    name varchar2(40) not null--과목이름
    
 );
 ALTER TABLE lesson ADD CONSTRAINT lesson_NO_PK PRIMARY KEY(NO);
@@ -49,11 +50,12 @@ ALTER TABLE lesson ADD CONSTRAINT lesson_ABBE_UK UNIQUE(abbre);
 create sequence lesson_seq 
 start with 1
 increment by 1;
-drop table trainee;
+--trainee 테이블
+drop table LESSON;
 create table trainee( 
     no number ,                     --pk seq
-    s_num varchar2(8) not null,     --student fk 번호
-    abbre varchar2(2) not null,     --lesson fk 과목요약
+    s_num varchar2(8),              --student fk 번호
+    abbre varchar2(2) ,             --lesson fk 과목요약
     section varchar2(20) not null,  --전공,부전공
     registdate date default sysdate      --수강신청일
    
@@ -75,4 +77,8 @@ insert into student values(student_seq.nextval,?,?,?,?,?,?,?,?,?,sysdate);
 SELECT STU.NO,STU.NUM,STU.NAME,STU.ID,PASSWD,S_NUM,SUB.NAME AS SUBJECT_NAME,BIRTHDAY,PHONE,ADDRESS,EMAIL,SDATE 
 FROM STUDENT STU INNER JOIN  SUBJECT SUB ON STU.S_NUM = SUB.NUM;
 
-
+UPDATE TRINEE SET S_NUM = ?, ABBRE = ?, SECTION = ? WHERE NO =?;
+--TRAINEE3개 조인
+select T.NO, T.SECTION,t.registdate,S.num,S.NAME ,L.ABBRE,L.NAME AS lname from TRAINEE T INNER JOIN STUDENT S ON T.S_NUM = S.NUM
+INNER JOIN LESSON L ON T.ABBRE = L.ABBRE 
+ORDER BY T.NO;
