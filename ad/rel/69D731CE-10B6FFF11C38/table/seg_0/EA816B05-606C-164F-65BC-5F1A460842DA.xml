@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EA816B05-606C-164F-65BC-5F1A460842DA" schemaObject="2DAAF5FD-3EB5-CC77-9485-4075F68D01A2" name="LESSON">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECTDB</sourceObjSchema>
+<sourceObjName>LESSON</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:30 UTC</createdTime>
+<ownerDesignName>ad</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="4CFB854D-BF66-AA6A-E677-D2985DA4438E">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>LESSON</sourceObjSchema>
+<sourceObjName>NO</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:30 UTC</createdTime>
+<ownerDesignName>ad</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ABBRE" id="3476E8CE-5666-8558-3569-D50E5F87EB82">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>LESSON</sourceObjSchema>
+<sourceObjName>ABBRE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:30 UTC</createdTime>
+<ownerDesignName>ad</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="601CA582-35F8-A681-46A2-07CD950B7ECB">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>LESSON</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:30 UTC</createdTime>
+<ownerDesignName>ad</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="11F1BB84-D005-AC61-83C1-6876DBF74D76" name="LESSON_NO_PK">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECTDB</sourceObjSchema>
+<sourceObjName>LESSON_NO_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:31 UTC</createdTime>
+<ownerDesignName>ad</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CFB854D-BF66-AA6A-E677-D2985DA4438E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5A8038A-C54A-1E02-ACC9-FAC4709260A3" name="LESSON_ABBE_UK">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECTDB</sourceObjSchema>
+<sourceObjName>LESSON_ABBE_UK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:31 UTC</createdTime>
+<ownerDesignName>ad</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3476E8CE-5666-8558-3569-D50E5F87EB82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1374134-8586-B143-88D9-BE9D28B21F6A" schemaObject="2DAAF5FD-3EB5-CC77-9485-4075F68D01A2" name="LESSON_ABBE_UK">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECTDB</sourceObjSchema>
+<sourceObjName>LESSON_ABBE_UK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:31 UTC</createdTime>
+<ownerDesignName>ad</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3476E8CE-5666-8558-3569-D50E5F87EB82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3DB9E76C-62F6-5002-A848-7F7BC2ADBCC9" schemaObject="2DAAF5FD-3EB5-CC77-9485-4075F68D01A2" name="LESSON_NO_PK">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECTDB</sourceObjSchema>
+<sourceObjName>LESSON_NO_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:31 UTC</createdTime>
+<ownerDesignName>ad</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CFB854D-BF66-AA6A-E677-D2985DA4438E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
