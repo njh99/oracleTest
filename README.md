@@ -40,6 +40,31 @@ public static void manin(String[] args){
 # 6. 하이퍼링크(hyper link)
 네이버<www.naver.com>
 
+[네이버](www.naver.com)
+
+# 이미지
+첫번째 방법: ![오라클 테스팅](Image/hello.PNG)
+
+두번째방법: <img src="Image/hello.PNG" width= 100px height=100px>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
   
   
