@@ -27,3 +27,184 @@ CREATE TABLE MEMBER(
 ALTER TABLE MEMBER ADD CONSTRAINT MEMBER_ID_PK PRIMARY KEY(ID);
 
 select * from member;
+-----------------------
+CREATE table LOGIN (
+    ID        VARCHAR2(12) NOT NULL,
+    PASS      VARCHAR2(12) NOT NULL
+    
+);
+ALTER TABLE LOGIN ADD CONSTRAINT LOGIN_ID_PK PRIMARY KEY(ID);
+
+select * from login;
+
+
+---------------------
+create table ACCOUNT(
+    NO         NUMBER(5,0) NOT NULL,
+    NAME     VARCHAR2(20) NOT NULL,
+    ID     VARCHAR2(4000) NOT NULL,
+    PWD     VARCHAR2(4000) NOT NULL,
+    REGDATE   DATE NOT NULL
+);
+alter table ACCOUNT add constraint ACCOUNT_NO_PK primary key (NO);
+alter table ACCOUNT add constraint ACCOUNT_ID_UQ UNIQUE(ID);
+
+
+-- jsp 회원가입 테이블
+CREATE TABLE SIGNUP (
+    ID VARCHAR2(12) ,                         -- 아이디 (4~12자의 영문 대소문자와 숫자)
+    PWD VARCHAR2(12) NOT NULL,                -- 비밀번호 (4~12자의 영문 대소문자와 숫자)
+    EMAIL VARCHAR2(100) NOT NULL,             -- 이메일 주소
+    NAME VARCHAR2(50) NOT NULL,               -- 이름
+    BIRTH NUMBER(10)                          -- 생년월일 (20001010)
+);
+
+ALTER TABLE SIGNUP ADD CONSTRAINT SIGNUP_ID_PK PRIMARY KEY(ID);
+
+-- jsp로그인테이블
+CREATE TABLE LOGIN2(
+    ID VARCHAR2(12),
+    PWD VARCHAR2(12) NOT NULL
+);
+ALTER TABLE LOGIN2 ADD CONSTRAINT LOGIN2_ID_PK PRIMARY KEY(ID);
+
+select * from signup;
+
+
+--------------김동욱님 로그인
+drop table login;
+CREATE table LOGIN (
+    ID         VARCHAR2(30) not null,
+    PASS      VARCHAR2(30) NOT NULL,
+    name varchar2(30) not null
+);
+alter table login add constraint login_id_pk primary key(id);
+
+select * from login;
+
+
+--TEMP MEMBER
+ CREATE TABLE  TEMPMEMBER(
+ ID VARCHAR2(20), 
+ PASSWD VARCHAR2(20), 
+ NAME VARCHAR2(20), 
+ MEM_NUM1 VARCHAR2(6), 
+ MEM_NUM2 VARCHAR2(7), 
+ E_MAIL VARCHAR2(30), 
+ PHONE VARCHAR2(30), 
+ ZIPCODE VARCHAR2(7), 
+ ADDRESS VARCHAR2(60), 
+ JOB VARCHAR2(30)
+   );
+   alter table TEMPMEMBER add constraint TEMPMEMBER_ID_PK primary key(id);
+   insert into tempMember 
+   values('aaaa', '1111', '홍길동', '123456', '7654321','hong@hanmail.net', '02-1234', '100-100', '서울', '프로그래머');
+ insert into tempMember 
+   values('bbbb', '1111', '홍길동', '123456', '7654321','hong@hanmail.net', '02-1234', '100-100', '서울', '프로그래머');
+    insert into tempMember 
+   values('cccc', '1111', '홍길동', '123456', '7654321','hong@hanmail.net', '02-1234', '100-100', '서울', '프로그래머');
+    insert into tempMember 
+   values('hello', '0123', '나종호', '123456', '7654321','hong@hanmail.net', '02-1234', '100-100', '수원', '프로그래머');
+   commit;
+   select * from tempmember;
+
+------로그인 프로그램
+CREATE table STUDENT (
+    ID           VARCHAR2(12)  NOT NULL,
+    PASS        VARCHAR2(12)  NOT NULL,
+    NAME       VARCHAR2(10)  NOT NULL,
+    PHONE1     VARCHAR2(3)   NOT NULL,
+    PHONE2     VARCHAR2(4)   NOT NULL,
+    PHONE3     VARCHAR2(4)   NOT NULL,
+    EMAIL       VARCHAR2(30)  NOT NULL,
+    ZIPCODE    VARCHAR2(7)   NOT NULL,
+    ADDRESS1   VARCHAR2(120) NOT NULL,
+    ADDRESS2   VARCHAR2(50)  NOT NULL
+   
+ );
+alter table STUDENT add constraint STUDENT_ID_PK primary key(id);
+select * from STUDENT;
+SELECT *  FROM STUDENT WHERE ID = '123';
+----우편번호 테이블
+create table zipcode  (
+   seq                  NUMBER(10)  not null,
+   zipcode              VARCHAR2(50),
+   sido                 VARCHAR2(50),
+   gugun                VARCHAR2(50),
+   dong                 VARCHAR2(50),
+   bunji                VARCHAR2(50)
+   
+ );
+ALTER TABLE ZIPCODE MODIFY BUNJI VARCHAR2(100);
+alter table zipcode add constraint zipcode_SEQ_PK primary key(SEQ);
+DESCRIBE ZIPCODE;
+SELECT * FROM ZIPCODE;
+select * from zipcode where dong like '광교%';
+
+--로그인 새로 만든 테이블
+CREATE table makelogin (
+    ID           VARCHAR2(12)  NOT NULL,
+    PASS        VARCHAR2(12)  NOT NULL,
+    NAME       VARCHAR2(10)  NOT NULL,
+    PHONE1     VARCHAR2(3)   NOT NULL,
+    PHONE2     VARCHAR2(4)   NOT NULL,
+    PHONE3     VARCHAR2(4)   NOT NULL,
+    birthday        date,
+    EMAIL       VARCHAR2(30)  NOT NULL,
+    ZIPCODE    VARCHAR2(7)   NOT NULL,
+    ADDRESS1   VARCHAR2(120) NOT NULL,
+    ADDRESS2   VARCHAR2(50)  NOT NULL
+   
+ );
+alter table makelogin add constraint makelogin_ID_PK primary key(ID);
+
+--답변용 게시판
+CREATE TABLE  BOARD (
+    NUM         NUMBER(7,0) NOT NULL , 
+    WRITER      VARCHAR2(12) NOT NULL , 
+    EMAIL       VARCHAR2(30) NOT NULL , 
+    SUBJECT     VARCHAR2(50) NOT NULL , 
+    PASS        VARCHAR2(10) NOT NULL , 
+    READCOUNT   NUMBER(5,0) DEFAULT 0 , 
+    "REF"       NUMBER(5,0) DEFAULT 0, 
+    STEP        NUMBER(3,0) DEFAULT 0, 
+    "DEPTH"     NUMBER(3,0) DEFAULT 0 , 
+    REGDATE     TIMESTAMP (6) DEFAULT SYSDATE, 
+    "CONTENT"   VARCHAR2(4000) NOT NULL , 
+    IP          VARCHAR2(20) NOT NULL 
+   );
+alter table BOARD add constraint BOARD_NUM_PK primary key(NUM);
+select * from board;
+--게시판 시퀀스
+CREATE SEQUENCE board_seq  -- 시퀀스이름
+   START WITH 1                -- 시작을 1로 설정
+   INCREMENT BY 1             -- 증가값을 1씩 증가
+   NOMAXVALUE               -- 최대값이 무한대..
+   NOCACHE
+   NOCYCLE;
+--------
+
+ select * from board;
+ SELECT COUNT() AS COUNT FROM BOARD;
+ select from board order by num desc;
+
+select * from board where num = 1;
+update board set readcount = readcount+1 where num = 1;
+commit;
+select count(*) count from board where num = 1 and pass = '1111';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
