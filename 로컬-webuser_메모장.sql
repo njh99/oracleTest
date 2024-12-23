@@ -141,15 +141,14 @@ DESCRIBE ZIPCODE;
 SELECT * FROM ZIPCODE;
 select * from zipcode where dong like '광교%';
 
+drop table makelogin;
 --로그인 새로 만든 테이블
 CREATE table makelogin (
     ID           VARCHAR2(12)  NOT NULL,
-    PASS        VARCHAR2(12)  NOT NULL,
+    PASS1        VARCHAR2(12)  NOT NULL,
+    PASS2        VARCHAR2(12)  NOT NULL,
     NAME       VARCHAR2(10)  NOT NULL,
-    PHONE1     VARCHAR2(3)   NOT NULL,
-    PHONE2     VARCHAR2(4)   NOT NULL,
-    PHONE3     VARCHAR2(4)   NOT NULL,
-    birthday        date,
+    PHONE        varchar2(13) not null,
     EMAIL       VARCHAR2(30)  NOT NULL,
     ZIPCODE    VARCHAR2(7)   NOT NULL,
     ADDRESS1   VARCHAR2(120) NOT NULL,
@@ -158,6 +157,7 @@ CREATE table makelogin (
  );
 alter table makelogin add constraint makelogin_ID_PK primary key(ID);
 
+select * from makelogin;
 --답변용 게시판
 CREATE TABLE  BOARD (
     NUM         NUMBER(7,0) NOT NULL , 
@@ -186,13 +186,24 @@ CREATE SEQUENCE board_seq  -- 시퀀스이름
 
  select * from board;
  SELECT COUNT() AS COUNT FROM BOARD;
- select from board order by num desc;
+
 
 select * from board where num = 1;
 update board set readcount = readcount+1 where num = 1;
 commit;
 select count(*) count from board where num = 1 and pass = '1111';
-
+select * from student;
+------------------
+--상품 테이블
+drop table product;
+CREATE TABLE PRODUCT(
+    NAME VARCHAR2(50),
+    PRICE VARCHAR2(15),
+    COMPANY VARCHAR2(20),
+    "SIZE" VARCHAR2(20),
+    STOCK NUMBER(10)
+);
+alter table PRODUCT add constraint PRODUCT_NAME_PK primary key(NAME);
 
 
 
