@@ -33,7 +33,7 @@ CREATE TABLE member (
     enabled   VARCHAR2(1) DEFAULT '1',
     PRIMARY KEY ( user_no )
 );
-
+select *from member_auth;
 --회원 테이블 sequence
 CREATE SEQUENCE member_seq START WITH 1 INCREMENT BY 1;
 
