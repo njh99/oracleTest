@@ -128,3 +128,31 @@ CREATE TABLE pay_coin_history (
 );
 -- 구매내역 테이블 시퀀스
 CREATE SEQUENCE pay_coin_history_seq START WITH 1 INCREMENT BY 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE TossPayment (
+    payment_id VARCHAR2(255) NOT NULL PRIMARY KEY,
+    order_id number(16) NOT NULL UNIQUE,
+    toss_order_id VARCHAR2(255) NOT NULL,
+    toss_payment_key VARCHAR2(255) NOT NULL UNIQUE,
+    toss_payment_method ENUM('가상계좌','간편결제','게임문화상품권','계좌이체','도서문화상품권','문화상품권','카드','휴대폰') NOT NULL,
+    toss_payment_status ENUM('ABORTED','CANCELED','DONE','EXPIRED','IN_PROGRESS','PARTIAL_CANCELED','READY','WAITING_FOR_DEPOSIT') NOT NULL,
+    total_amount number NOT NULL,
+    approved_at date(6) DEFAULT NULL,
+    requested_at date(6) NOT NULL,
+    CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);

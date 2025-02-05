@@ -205,10 +205,102 @@ CREATE TABLE PRODUCT(
 );
 alter table PRODUCT add constraint PRODUCT_NAME_PK primary key(NAME);
 
+-------------
+CREATE TABLE memo (
+ idx NUMBER PRIMARY KEY,
+ writer VARCHAR2(50) NOT NULL,
+ memo VARCHAR2(100) NOT NULL,
+ post_date DATE
+);
+CREATE SEQUENCE memo_seq
+ START WITH 1
+ INCREMENT BY 1;
 
+INSERT INTO memo VALUES (memo_seq.nextVal,'kim', 'memo1', SYSDATE);
+insert into memo values (memo_seq.nextVal,'park', 'memo2', SYSDATE);
+select * from memo order by idx desc;
+commit;
+--------------------
 
+CREATE TABLE survey (
+ survey_idx NUMBER NOT NULL PRIMARY KEY,
+ question VARCHAR2(4000) NOT NULL,
+ ans1 VARCHAR2(500) NOT NULL,
+ ans2 VARCHAR2(500) NOT NULL,
+ ans3 VARCHAR2(500) NOT NULL,
+ ans4 VARCHAR2(500) NOT NULL,
+ status CHAR(1) DEFAULT '1'
+);
+insert into survey values (1,'좋아하는 언어는 무엇입니까?','Java','C','Python','C#','1');
+select * from survey where survey_idx=1;
+CREATE TABLE answer (
+ answer_idx NUMBER PRIMARY KEY,
+ survey_idx NUMBER NOT NULL,
+ num NUMBER NOT NULL
+);
+CREATE SEQUENCE answer_seq
+ START WITH 1
+ INCREMENT BY 1;
 
+insert into answer values
+(answer_seq.nextVal ,1,2);
+insert into answer values
+(answer_seq.nextVal,1,3);
+insert into answer values
+(answer_seq.nextVal,1,4);
+select * from answer;
+CREATE OR REPLACE VIEW survey_v AS
+SELECT survey_idx,
+ num, COUNT(*) AS sum_num,
+ ROUND(
+ (SELECT COUNT(*)
+ FROM answer
+ WHERE survey_idx = s.survey_idx AND num = s.num) * 100.0 /
+ (SELECT COUNT(*)
+ FROM answer
+ WHERE survey_idx = s.survey_idx), 1) AS rate
+FROM answer s
+GROUP BY survey_idx, num
+ORDER BY num;
+select * from survey_v where survey_idx=1;
 
+--------방명록--------
+CREATE TABLE guestbook (
+ idx NUMBER PRIMARY KEY,
+ name VARCHAR2(50) NOT NULL,
+ email VARCHAR2(50) NOT NULL,
+ passwd VARCHAR2(50) NOT NULL,
+ contents VARCHAR2(200) NOT NULL,
+ post_date DATE
+);
+
+create sequence guestbook_seq
+start with 1
+increment by 1;
+
+insert into guestbook values (guestbook_seq.NEXTVAL, 'kim', 'kim@daum.net', '1234', '첫번째 게시물',
+SYSDATE);
+
+select * from product2;
+commit;
+
+------상품등록------
+CREATE TABLE product2 (
+ product_code NUMBER PRIMARY KEY,
+ product_name VARCHAR2(100) NOT NULL,
+ description VARCHAR2(2000),
+ price NUMBER(10, 2) DEFAULT 0,
+ filename VARCHAR2(500)
+);
+
+create sequence product2_seq
+start with 1
+increment by 1;
+
+INSERT INTO product2 (product_code, product_name, description, price)
+VALUES (product2_seq.NEXTVAL , '사과', '맛있는 사과입니다.', 5000);
+
+commit;
 
 
 
